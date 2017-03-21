@@ -28,7 +28,7 @@ syn match ozOperator /|/
 syn region ozString start=/"/ skip=/\\"/ end=/"/
 syn match ozAtom /[a-z][A-Za-z0-9]*\>/
 syn region ozAtom start=/'/ skip=/\\'/ end=/'/
-syn match ozVariable /[A-Z][A-Za-z0-9]*\>/
+syn match ozVariable /[A-Z][A-Za-z0-9_]*\>/
 syn region ozVariable start=/`/ skip=/\\`/ end=/`/
 syn match ozCharacter /&[^\\]/
 syn match ozNumber /[0-9]/
