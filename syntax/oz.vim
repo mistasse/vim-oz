@@ -26,7 +26,7 @@ syn match ozOperator /#/
 syn match ozOperator /|/
 
 syn region ozString start=/"/ skip=/\\"/ end=/"/
-syn match ozAtom /[a-z][A-Za-z0-9]*\>/
+syn match ozAtom /[a-z][A-Za-z0-9_]*\>/
 syn region ozAtom start=/'/ skip=/\\'/ end=/'/
 syn match ozVariable /[A-Z][A-Za-z0-9_]*\>/
 syn region ozVariable start=/`/ skip=/\\`/ end=/`/
@@ -39,7 +39,7 @@ syn region ozComment start="/\*" end="\*/"
 
 " Basic logic for this adapted/borrowed from c.vim
 syn region ozIncluded display contained start=+'+ skip=+\\'+ end=+'+
-syn match ozInclude display /^\s*\\insert\>\s*'/ contains=ozIncluded
+syn match ozInclude display /\\insert\>\s*'/ contains=ozIncluded
 
 syn sync fromstart
 
